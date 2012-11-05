@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://bon27.github.com/shuke_blog/atom.xml" rel="self"/>
+  <title><![CDATA[Category: records | My Octopress Blog]]></title>
+  <link href="http://bon27.github.com/shuke_blog/blog/categories/records/atom.xml" rel="self"/>
   <link href="http://bon27.github.com/shuke_blog/"/>
   <updated>2012-11-05T21:09:07+08:00</updated>
   <id>http://bon27.github.com/shuke_blog/</id>
@@ -18,9 +18,9 @@
     <link href="http://bon27.github.com/shuke_blog/blog/2012/12/04/my-first-post-to-github/"/>
     <updated>2012-12-04T00:00:00+08:00</updated>
     <id>http://bon27.github.com/shuke_blog/blog/2012/12/04/my-first-post-to-github</id>
-    <content type="html"><![CDATA[<p>Included file &#8216;JB/setup&#8217; not found in _includes directory</p>
+    <content type="html"><![CDATA[<p>Included file 'JB/setup' not found in _includes directory</p>
 
-<h1>My Fist Post to GitHub</h1>
+<h1>Category: records</h1>
 
 <p class="meta">04 Nov 2012 </p>
 
@@ -32,7 +32,7 @@
 <p>   在网上查了很多资料，有这几篇，给我的帮助最大：
    - BeiYuu所写的<a href="http://beiyuu.com/github-pages/#github">使用GitHub Pages建独立博客</a>
    - 雁起平沙的<a href="http://yanping.me/cn/blog/2012/03/18/github-pages-step-by-step/">GitHub Pages极简教程</a>
-   - 阮一峰所写的<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog&#8212;-github Pages和jekyll入门</a></p>
+   - 阮一峰所写的<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">搭建一个免费的，无限流量的Blog----github Pages和jekyll入门</a></p>
 
 <pre><code>对于我这样的菜鸟而言，如果不在本地查看，而是每次都要到github网站上面查看博客效果的话，挺不方便。一来因为对于设计的感觉太差，需要经常调整，如果只能够在网络上查看，每次都要用git add + git commit + git push，特别麻烦。二来，如果连接不上网络的时候（虽然可能性较小），在本地可以继续写作，并随时查看效果，只要等到有网络了，再推送上去即可，丝毫不影响工作进程。
 
@@ -52,7 +52,7 @@
 
 <p>   好了，现在可以生成新的SSH key文件了：</p>
 
-<p>   $ ssh -keygen -t rsa -C &#8220;username@youremail.com&#8221;
+<p>   $ ssh -keygen -t rsa -C "username@youremail.com"
    Generating public/private rsa key pair.
    Enter file in which to save the key(/Users/your_user_directory/.ssh/id_rsa):</p>
 
@@ -77,8 +77,8 @@ Hi 'Your name'! You've successfully authenticated, but GitHub dose not provide s
 <p>   ##<em>设置github账号信息</em></p>
 
 <p>   在git shell 中使用命令：
-   $ git config &#8211;global user.name  &#8220;your names&#8221;
-   $ git config &#8211;global user.email &#8220;your email&#8221;</p>
+   $ git config --global user.name  "your names"
+   $ git config --global user.email "your email"</p>
 
 <p>   OK,现在github的设置已经完成。接下来就要转到<em>博客部分</em>了。</p>
 
@@ -113,20 +113,20 @@ Hi 'Your name'! You've successfully authenticated, but GitHub dose not provide s
 
 <p>基本结构如下（从beiyuu的博文中copy而来）：</p>
 
-<p>|&#8211; <em>config.yml
-|&#8211; </em>includes
-|&#8211; <em>layouts
-|   |&#8211; default.html
+<p>|-- <em>config.yml
+|-- </em>includes
+|-- <em>layouts
+|   |-- default.html
 |   <code>-- post.html
 |-- _posts
 |   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|  </code>&#8211; 2009-04-26-barcamp-boston-4-roundup.textile
-|&#8211; </em>site
-`&#8211; index.html</p>
+|  </code>-- 2009-04-26-barcamp-boston-4-roundup.textile
+|-- </em>site
+`-- index.html</p>
 
 <ul>
 <li><p>_config.yml为配置文件，定义了全局变量，用于设定想要得到的网站效果，语言解释器的选择等等的内容。一般只需要根据相应的文档设置好了即可。</p></li>
-<li><p>includes： 文件夹，类似于编程语言源码之中的include文件夹，用来存放一些可以重用的模块，通过类似Included file &#8216;example_file.ext&#8217; not found in _includes directory的语句进行调用。可以用在模板（template）和普通的文件之中。</p></li>
+<li><p>includes： 文件夹，类似于编程语言源码之中的include文件夹，用来存放一些可以重用的模块，通过类似Included file 'example_file.ext' not found in _includes directory的语句进行调用。可以用在模板（template）和普通的文件之中。</p></li>
 <li><p>layouts: 存储模板文件的位置。一般至少需要两个模板文件：default和posts。
 需要通过YAML front matter来定义，在模板文件中的标记语句，用来将数据插入到模板中来。在jekyll运行时候，会为你自动做到这些插入。</p></li>
 <li><p>posts： 存储博文的文件夹。需要严格遵守这样的方式命名：2012-11-04-first-post.md。md为后缀名，也可以为textile或者html。你要做的主要工作，就是用这些标记语言写作，然后扔到这个文件夹中，不用去管文章的样式，结构，背景等等，jekyll会为你做到这些，前提是你设置好了模板。当然，也可以下载他人分享的成熟模板使用。</p></li>
@@ -194,7 +194,7 @@ config文件中可以定义全局变量，如 title: myBlog。在文章中使用
 在_config.yml中设置：mardown: rdiscount 就可以使用rdiscount进行解析。</p>
 
 <p> 当当当当。。。。本地环境搭建完成。cd 到博客的根目录中，然后使用命令：
- $ jekyll &#8211;server</p>
+ $ jekyll --server</p>
 
 <p> 就可以通过localhost:4000来访问了。</p>
 
